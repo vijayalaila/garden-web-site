@@ -1,0 +1,197 @@
+<html>
+    {% load static %}
+    <head>
+        <title>garden</title>
+
+    <style>
+        ul{
+            float:right;
+        }
+        ul li{
+            display: inline;
+            margin-right:30px;
+            
+        }
+         a{
+            color:royalblue ;
+            text-decoration: none;
+            font-size: 30px;
+            
+        }
+        li a:hover{
+            background-color:brown;
+
+        }
+        
+     div.gallery {
+  margin-left:100px;
+  float:left;
+  width:320px;
+  
+}
+
+     div.gallery img {
+  width:100%;
+  height:500px;
+  
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  font-size:25px ; 
+}
+label{
+  font-size: 20px;
+}
+input{
+  width:150px;
+  height:25px;
+}
+table,th,td{
+  border: 1px solid black;
+  border-collapse:collapse ;
+  text-align: center;
+}
+
+table th{
+   color:blue ;
+   font-size:25px;
+}
+table td{
+  color:rgb(128, 0, 0);
+  font-size:20px;
+}
+
+</style>
+  </head>
+    <body style="background-color:pink;">
+        
+        <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="#">Service</a></li>
+            </ul>
+            
+            <h1 style="color:red;text-align:center;">JOTHILAKSHIMI NURSERY GARDEN</h1>
+            <h2 style="color: blue;text-align:center;">Welcom To My Nursery</h2>
+         <h1><pre style="font-size:25px;font-style:oblique;">
+             We "JOTHILAKSHIMI Nursery Garden",are one of the foremost Exporter, Manufacturer & Wholesaler
+             an extensive array of Plants. In our offered products range, We have Plants Saplings.
+             Established in the year of 2000, and Our garden contains diffrent types of plants. for instance
+            "cocount,graft(ottu)mango,and varieties of mango,graft cashew VR3,and non graft cashew,mohagany,neem plant,
+             jack fruit,indian blackberry,pongan(pongamia pinnate)tree, Teak wood plant,lemon,badam,feltoform,vilvam plant,
+             poovarasu(Thespesia populnea)tree",and ect.Our vendors use optimized quality ingredients and latest tools in order to
+             have excellent quality plants.Apart from this, these products are offered to the clients at very reasonable rates.
+
+             Moreover, the aroma and ambient of these plants makes garden look
+             beautiful.
+            </pre></h1>
+            
+            <a target="_blank" href="{% static 'image/coconut.jpg'%}">
+            <img src="{% static 'image/coconut.jpg'%}" style="margin-left:400px;width:700px;
+            height:600px;bottom:600px;">
+            </a>
+            <p><h3 style="text-align: center;font-size: 50px;">Coconut Plant(5kg)</h3>
+                <h3 style="text-align:center;font-size:50px">₹120</h3>
+            </p>
+           
+    <div>
+    <div class="gallery">
+        <a target="_blank" href="{% static 'image/swietenia macrophylla.jpg'%}">
+            <img src="{% static 'image/swietenia macrophylla.jpg'%}">
+        </a>
+        <div class="desc"><p>Mahagany</p><p>₹50</p></div>
+        </div>
+      <div class="gallery">
+        <a target="_blank" href="{% static 'image/Mango.jpg' %}">
+        <img src="{% static 'image/Mango.jpg' %}">
+      </a>
+      <div class="desc"><p>Mango</p><p>₹100</p></div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="{% static 'image/Badam.jpg' %}"> 
+        <img src="{% static 'image/Badam.jpg' %}" >
+        </a>
+        <div class="desc"><p>Badam</p><p>₹40</p></div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="{% static 'image/Blackberry.jpg' %}"> 
+        <img src="{% static 'image/Blackberry.jpg' %}">
+        </a>
+        <div class="desc"><p>Blackberry</p><p>₹40</p></div>
+      </div>
+        <div class="gallery">
+          <a target="_blank" href="{% static 'image/Jack fruit.jpg' %}">
+          <img src="{% static 'image/Jack fruit.jpg' %}">
+          </a>
+          <div class="desc"><p>Jack fruit</p><p>₹40</p></div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="{% static 'image/Portia(poovarasan).jpg' %}">
+          <img src="{% static 'image/Portia(poovarasan).jpg' %}">
+          </a>
+          <div class="desc"><p>(poovarasan)portia tree</p><p>₹40</p></div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="{% static 'image/cashew.jpg' %}">
+        <img src="{% static 'image/cashew.jpg' %}">
+        </a>
+        <div class="desc"><p>Cashew</p><p>₹90</p>
+        </div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="{% static 'image/Rose ottu.jpg' %}">
+         <img src="{% static 'image/Rose ottu.jpg' %}">
+        </a>
+       <div class="desc"><p>Rose ottu</p><p>₹45</p></div>
+     </div>
+      <div class="gallery">
+        <a target="_blank" href="{% static 'image/Mundhiri.jpg' %}">
+        <img src="{% static 'image/Mundhiri.jpg' %}">
+        </a>
+        <div class="desc"><p>Cashew</p><p>₹25</p></div>
+      </div>
+      
+ </div><br><br><br><br>
+ <form action="adddate" method="POST" autocomplete="off"> 
+  {% csrf_token %}
+    <h1>Garden project</h1>
+    <label>Name</label><br>
+    <input type="text" name="name"><br><br>
+    <label>City</label><br>
+    <input type="text" name="city"><br><br>
+    <label>Email</label><br>
+    <input type="text" name="email"><br><br>
+    <label>Contect</label><br>
+    <input type="text" name="contect"><br><br>
+    <input type="Submit">
+</form> 
+<div>
+  {% if dates %}
+  <table style="width:60%;">
+    <h3>viwe details </h3>
+    <tr>
+      <th>S.No</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Email</th>
+      <th>Contect</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    {% for data in dates%}
+    <tr>
+      <td>{{forloop.counter}}</td>
+        <td>{{data.Name}}</td>
+        <td>{{data.City}}</td>
+        <td>{{data.Email}}</td>
+        <td>{{data.Contect}}</td>
+        <td><a href="update/{{data.id}}">Update</a></td>
+        <td><a href="deletedata/{{data.id}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+    {% endif %} 
+</div>
+    </body>
+  </html> 

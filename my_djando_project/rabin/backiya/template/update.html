@@ -1,0 +1,21 @@
+<html>
+   <head>
+      <title>code</title>
+
+   </head>
+   <body>
+      <form action="/update/{{data.id}}" method="POST"> 
+         {% csrf_token %}
+           <h1>Garden project</h1>
+           <label>Name</label><br>
+           <input type="text" value="{{data.Name}}" name="name"><br><br>
+           <label>City</label><br>
+           <input type="text"value="{{data.City}}" name="city"><br><br>
+           <label>Email</label><br>
+           <input type="text" value="{{data.Email}}" name="email"><br><br>
+           <label>Contect</label><br>
+           <input type="text" value="{{data.Contect}}" name="contect"><br><br>
+           <input type="Submit">
+       </form> 
+   </body>
+</html>
